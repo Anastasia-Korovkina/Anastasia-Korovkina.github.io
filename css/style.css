@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.game {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.bg {
+    height: 100vh;
+    background-color: #edecf2;
+}
+
+.road {
+    height: 100vh;
+    background-size: cover;
+}
+
+.car {
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    left: 20vh;
+    z-index: 1;
+}
+
+#car {
+    width: 18vh;
+    height: auto;
+    animation-name: stylie-transform-keyframes;
+    animation-duration: 5000ms;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes stylie-transform-keyframes {
+    0% {
+        transform: translate(0vh, 0vh) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(-90deg) translate(-50%, -50%);
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+    }
+    20% {
+        transform: translate(5vh, -20vh) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(-31deg) translate(-50%, -50%);
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+    }
+    40% {
+        transform: translate(20vh, -40vh) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(-65deg) translate(-50%, -50%);
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+    }
+    60% {
+        transform: translate(17vh, -55vh) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(-140deg) translate(-50%, -50%);
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+    }
+    80% {
+        transform: translate(10vh, -60vh) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(-132deg) translate(-50%, -50%);
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+    }
+    100% {
+        transform: translate(-15vh, -100vh) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(-92deg) translate(-50%, -50%);
+    }
+}
+
+html::after {
+    content: url(https://ga-beacon.appspot.com/UA-42910121-1/stylie?pixel);
+    position: absolute;
+    left: -999em;
+}
